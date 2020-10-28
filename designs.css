@@ -1,51 +1,11 @@
      /* =============================================
 Base styles used by All Screens DO NOT EDIT BELOW
 ============================================= */
-
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
+article, aside, figcaption, figure, footer, header, main, nav, section {
     display: block;
 }
 
-address,
-article,
-aside,
-blockquote,
-body,
-cite,
-div,
-dl,
-dt,
-dd,
-em,
-figcaption,
-figure,
-footer,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-html,
-img,
-li,
-main,
-nav,
-nav a,
-ol,
-p,
-section,
-span,
-ul {
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul {
     margin: 0;
     padding: 0;
     border: 0;
@@ -79,7 +39,7 @@ Base styles used by All Screens DO NOT EDIT ABOVE
 ============================================= */
  /* HTML and Body Styles */
 
-::root {
+:root {
     --background-html: rgb(246, 177, 177); 
     --shadow: rgb(51, 51, 51);
     --nav-active: rgb(220, 27, 27);
@@ -119,7 +79,7 @@ p{
     margin: 15px;
 }
 
-.top{
+.top ul li{
     margin: 10px;
 }
 
@@ -140,8 +100,7 @@ article p:nth-child(2) img{
     float: right;
     width: 45%;
     margin: 0px 0px 120px 50px;
-    transform: rotate(30deg);
-    transform: translate(0, -60px);
+    transform: rotate(30deg) translate(0, 60px);
     box-shadow: var(--shadow) 10px -10px 30px;
 }
 
@@ -157,7 +116,7 @@ overflow: auto;
     font-size: 2.5rem;
     color: var(--text-color);
     text-shadow: white -2px 0px 1px, white -5px 0px 30px; 
-    Padding: 20px 15px 10px 0px;
+    padding: 20px 15px 10px 0px;
     text-align: right;
 }
 
@@ -178,4 +137,195 @@ aside{
 
 aside a{
     color: var(--nav-active);
+}
+
+aside h1{
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: .4rem;
+    text-align: center;
+    margin: 20px 0px 25px 0px;
+}
+
+aside img{
+    display: block;
+    width: 30%;
+    margin: 5px auto;
+}
+
+dl{
+    text-align: center;
+}
+footer{
+    width: 100%; 
+}
+#bottom{
+    background-color: var(--nav-active);
+    color: var(--text-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#bottom ul li{
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+#bottom ul li a{
+    color: white;
+}
+
+footer p{
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    padding: 10px 0px 10px 10px;
+}
+
+#bottom ul{
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 150px;
+}
+
+@media(max-width: 480px) {
+
+body{
+    background-color: var(--shadow);
+    color: var(--text-background);
+}
+
+aside{
+    display: none;
+}
+
+article img{
+    display: none;
+}
+
+.spotlight{
+    display: none;
+}
+
+.top ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.top ul li{
+    font-size: 2.2rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 130px;
+}
+
+.top ul li a{
+    padding: 50% 0% 50% 0%;
+}
+
+nav.top ul li:nth-of-type(1){
+    background-image: url(images/cw_image01.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+nav.top ul li:nth-of-type(2){
+    background-image: url(images/cw_image02.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+nav.top ul li:nth-of-type(3){
+    background-image: url(images/cw_image03.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}   
+
+nav.top ul li:nth-of-type(4){
+    background-image: url(images/cw_image04.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+nav.top ul li:nth-of-type(5){
+    background-image: url(images/cw_image05.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+nav.top ul li:nth-of-type(6){
+    background-image: url(images/cw_image06.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#links{
+    display: flex;
+    flex-wrap: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#links a{
+    background-color: var(--nav-active);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+}
+
+@media(min-width: 481px){
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+article{
+    flex-basis: 400px;
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+aside{
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+.top ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--shadow);
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.top ul li{
+    flex-basis: 80px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+#links{
+    display: none;
+}
+
 }
